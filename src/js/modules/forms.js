@@ -1,6 +1,6 @@
 'use strict';
 
-import checkNumInputs from "./checkNumInputs";
+import checkNumInputs from './checkNumInputs';
 
 const forms = (state) => {
   const form = document.querySelectorAll('form'),
@@ -39,8 +39,8 @@ const forms = (state) => {
       item.appendChild(statusMessage); // Создаем поле для пользователя со статусом отправки
 
       const formData = new FormData(item); // Создаем переменную с данными, которые будут отправлены на сервер
-      if (item.getAttribute('data-calc') === 'end'){
-        for (let key in state){
+      if (item.getAttribute('data-calc') === "end") {
+        for (let key in state) {
           formData.append(key, state[key]);
         }
       } // Берём те данные из state, которые уже сформировались, перебираем их и отправляем в formData при помощи метода append
@@ -56,12 +56,12 @@ const forms = (state) => {
           setTimeout(() => {
             statusMessage.remove();
           }, 3000);
-          setTimeout(() => {
-            if (document.querySelector('[data-calc]')){
-              document.querySelector('.popup_calc_end').style.display = 'none';
-              document.body.style.overflow = '';
-            }
-          }, 3000);
+          // setTimeout(() => {
+          //   if (document.querySelector('[data-calc]')){
+          //     document.querySelector('.popup_calc_end').style.display = 'none';
+          //     document.body.style.overflow = '';
+          //   }
+          // }, 3000);
         }); // Обрабатываем промис, который вернется, и сбрасываем форму.
     });
   });

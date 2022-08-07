@@ -17,7 +17,6 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display
   function showTabContent(i = 0) {
     content[i].style.display = display;
     tab[i].classList.add(activeClass);
-
   }
 
   hideTabContent();

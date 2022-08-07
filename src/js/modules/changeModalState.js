@@ -47,7 +47,6 @@ const changeModalState = (state) => {
   bindActionToElems('input', windowHeight, 'height');
   bindActionToElems('change', windowType, 'type');
   bindActionToElems('change', windowProfile, 'profile');
-
 };
 
 export default changeModalState;
